@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<style>
+    body {
+        font: normal 7pt Arial;
+        color: #f11924;
+        background-color: #223f7b;
+        text-align: center;
+        font-style: italic;
+    }
+    div{
+        margin-top: 10pt;
+    }
+    input{
+        width: 50pt;
+    }
+</style>
+<body>
+    <h1>BRASILEIRO OU NÃO!?</h1>
+    <strong>País de Nacimento: </strong><input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    
+    <strong><div id="res">
+        Resultado
+        
+
+    </div></strong>
+    
+
+    <script>
+        function verificar(){
+            var pais= document.getElementById('txt')
+            var p=String(txt.value)
+            var res= document.getElementById('res')
+            res.innerHTML=`<p>Vivendo no ${p}</p>` 
+            if (p=='Brasil'){
+                res.innerHTML+=`<p>Você é Brasileiro</p>`
+            }else{
+            res.innerHTML+='<p>Você é Estrangeiro!</p>'
+            }
+            }
+    </script>
+</body>
+</html>
